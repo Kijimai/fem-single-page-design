@@ -1,0 +1,21 @@
+.btn {
+  padding: 0.8rem 2.7rem;
+  border-radius: 2.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  font-weight: 700;
+  line-height: 2.8rem;
+  &.dark {
+    background-color: var(--color-dark);
+    color: var(--color-text-light);
+
+    &:hover {
+      background-color: var(--color-galactic-blue);
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    padding: 1.4rem 4.5rem;
+  }
+}

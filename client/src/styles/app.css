@@ -1,9 +1,60 @@
+:root {
+  --color-dark: #030303;
+  --color-text-light: #fff7f0;
+  --color-galactic-blue: #755CDE;
+}
+
 *,
 *::after,
 *::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.navigator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.6rem;
+}
+.navigator__site-logo img {
+  display: block;
+  height: 4.8rem;
+  width: 4.8rem;
+}
+@media screen and (min-width: 375px) {
+  .navigator__site-logo img {
+    height: auto;
+    width: auto;
+  }
+}
+
+.btn {
+  padding: 0.8rem 2.7rem;
+  border-radius: 2.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease background-color;
+  font-weight: 700;
+  line-height: 2.8rem;
+}
+.btn.dark {
+  background-color: var(--color-dark);
+  color: var(--color-text-light);
+}
+.btn.dark:hover {
+  background-color: var(--color-galactic-blue);
+}
+@media screen and (min-width: 375px) {
+  .btn {
+    padding: 1.4rem 4.5rem;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */
