@@ -13,31 +13,42 @@
 
   &__gdesign {
     grid-area: "gdesign";
+    background-color: var(--color-galactic-blue);
   }
 
   &__ui-ux {
     grid-area: "ui-ux";
+    background-color: var(--color-summer-yellow);
   }
 
   &__apps {
     grid-area: "apps";
+    background-color: var(--color-pink);
   }
 
   &__illustrations {
     grid-area: "illustrations";
+    background-color: var(--color-light-red);
   }
 
   &__photography {
     grid-area: "photography";
+    background-color: var(--color-cyan);
   }
 
   &__motion {
     grid-area: "motion";
+    background-color: var(--color-dark-purple);
   }
 
   @media screen and (min-width: 376px) {
     grid-template-areas: "gdesign gdesign ui-ux apps
      gdesign gdesign illustrations illustrations 
      photography motion motion";
+  }
+
+  @media screen and (min-width: 769px) {
+    grid-template-areas: "gdesign gdesign ui-ux apps photography photography
+     gdesign gdesign illustrations illustrations motion motion";
   }
 }
