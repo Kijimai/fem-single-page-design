@@ -16,23 +16,55 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  padding: 1.6rem;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
 .navigator {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 1.6rem;
 }
 .navigator__site-logo img {
   display: block;
   height: 4.8rem;
   width: 4.8rem;
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
   .navigator__site-logo img {
     height: auto;
     width: auto;
   }
+}
+
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (min-width: 769px) {
+  .container {
+    max-width: 70%;
+  }
+}
+
+.hero {
+  text-align: center;
+  margin: 3.2rem 0;
+}
+.hero__heading {
+  font-size: 3.6rem;
+  margin-bottom: 1.6rem;
+}
+.hero__content {
+  padding: 0 2.9rem;
+}
+.hero__content p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.6rem;
 }
 
 .btn {
@@ -51,7 +83,7 @@ html {
 .btn.dark:hover {
   background-color: var(--color-galactic-blue);
 }
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 376px) {
   .btn {
     padding: 1.4rem 4.5rem;
   }

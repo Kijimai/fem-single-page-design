@@ -1,4 +1,5 @@
 import Navigator from "./components/Navigator/Navigator"
+import Main from "./components/Main/Main"
 import "./styles/app.css"
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
     <div className="App">
       <Navigator />
       <main>
-        
+        <Main />
       </main>
       <Navigator />
     </div>

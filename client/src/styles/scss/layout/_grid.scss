@@ -1,0 +1,43 @@
+.grid {
+  display: grid;
+}
+
+.specialties {
+  gap: 2.4rem;
+  grid-template-areas: " gdesign gdesign
+    gdesign gdesign
+    ui-ux apps
+    illustrations illustrations
+    photography photography
+    motion motion";
+
+  &__gdesign {
+    grid-area: "gdesign";
+  }
+
+  &__ui-ux {
+    grid-area: "ui-ux";
+  }
+
+  &__apps {
+    grid-area: "apps";
+  }
+
+  &__illustrations {
+    grid-area: "illustrations";
+  }
+
+  &__photography {
+    grid-area: "photography";
+  }
+
+  &__motion {
+    grid-area: "motion";
+  }
+
+  @media screen and (min-width: 376px) {
+    grid-template-areas: "gdesign gdesign ui-ux apps
+     gdesign gdesign illustrations illustrations 
+     photography motion motion";
+  }
+}

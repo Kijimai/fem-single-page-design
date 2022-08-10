@@ -1,4 +1,8 @@
 @import "abstracts/variables";
 @import "base/base";
-@import "navigator/navigator";
+
+@import "layout/navigator";
+@import "layout/layout";
+@import "layout/hero";
+
 @import "components/button";
