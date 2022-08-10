@@ -4,51 +4,100 @@
 
 .specialties {
   gap: 2.4rem;
-  grid-template-areas: " gdesign gdesign
-    gdesign gdesign
-    ui-ux apps
-    illustrations illustrations
-    photography photography
-    motion motion";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 15.5rem);
+  grid-template-areas:
+    "gdesign gdesign"
+    "gdesign gdesign"
+    "ui-ux apps"
+    "illustrations illustrations"
+    "photography photography"
+    "motion motion";
+
+  & > * {
+    border-radius: 0.8rem;
+  }
+
+  &__text {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--color-text-light);
+  }
 
   &__gdesign {
-    grid-area: "gdesign";
+    grid-area: gdesign / gdesign / gdesign / gdesign;
     background-color: var(--color-galactic-blue);
   }
 
   &__ui-ux {
-    grid-area: "ui-ux";
+    grid-area: ui-ux / ui-ux / ui-ux / ui-ux;
     background-color: var(--color-summer-yellow);
   }
 
   &__apps {
-    grid-area: "apps";
+    grid-area: apps / apps / apps / apps;
     background-color: var(--color-pink);
   }
 
   &__illustrations {
-    grid-area: "illustrations";
+    grid-area: illustrations / illustrations / illustrations / illustrations;
     background-color: var(--color-light-red);
   }
 
   &__photography {
-    grid-area: "photography";
+    grid-area: photography / photography / photography / photography;
     background-color: var(--color-cyan);
   }
 
   &__motion {
-    grid-area: "motion";
+    grid-area: motion / motion / motion / motion;
     background-color: var(--color-dark-purple);
   }
 
-  @media screen and (min-width: 376px) {
-    grid-template-areas: "gdesign gdesign ui-ux apps
-     gdesign gdesign illustrations illustrations 
-     photography motion motion";
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 15.5rem);
+    grid-template-areas:
+      "gdesign gdesign ui-ux apps"
+      "gdesign gdesign illustrations illustrations"
+      "photography photography motion motion";
+
+    &__gdesign {
+      grid-area: gdesign / gdesign / gdesign / gdesign;
+      background-color: var(--color-galactic-blue);
+    }
+
+    &__ui-ux {
+      grid-area: ui-ux / ui-ux / ui-ux / ui-ux;
+      background-color: var(--color-summer-yellow);
+    }
+
+    &__apps {
+      grid-area: apps / apps / apps / apps;
+      background-color: var(--color-pink);
+    }
+
+    &__illustrations {
+      grid-area: illustrations / illustrations / illustrations / illustrations;
+      background-color: var(--color-light-red);
+    }
+
+    &__photography {
+      grid-area: photography / photography / photography / photography;
+      background-color: var(--color-cyan);
+    }
+
+    &__motion {
+      grid-area: motion / motion / motion / motion;
+      background-color: var(--color-dark-purple);
+    }
   }
 
-  @media screen and (min-width: 769px) {
-    grid-template-areas: "gdesign gdesign ui-ux apps photography photography
-     gdesign gdesign illustrations illustrations motion motion";
+  @media screen and (min-width: 1025px) {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 15.5rem);
+    grid-template-areas:
+      "gdesign gdesign ui-ux apps photography photography"
+      "gdesign gdesign illustrations illustrations motion motion";
   }
 }
