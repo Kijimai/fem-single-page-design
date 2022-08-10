@@ -78,14 +78,26 @@ body {
 
 .specialties {
   gap: 2.4rem;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(6, 15.5rem);
+  grid-template-columns: repeat(2, minmax(15.5rem, 1fr));
+  grid-template-rows: repeat(6, minmax(18.2rem, 1fr));
   grid-template-areas: "gdesign gdesign" "gdesign gdesign" "ui-ux apps" "illustrations illustrations" "photography photography" "motion motion";
 }
 .specialties > * {
   border-radius: 0.8rem;
 }
+.specialties__content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.4rem;
+}
+.specialties__image {
+  align-self: flex-end;
+  display: block;
+}
 .specialties__text {
+  white-space: nowrap;
+  margin-top: auto;
   font-size: 2.4rem;
   font-weight: 700;
   color: var(--color-text-light);
@@ -116,39 +128,15 @@ body {
 }
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .specialties {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 15.5rem);
+    grid-template-columns: repeat(4, minmax(15.5rem, 1fr));
+    grid-template-rows: repeat(3, minmax(18.2rem, 1fr));
     grid-template-areas: "gdesign gdesign ui-ux apps" "gdesign gdesign illustrations illustrations" "photography photography motion motion";
-  }
-  .specialties__gdesign {
-    grid-area: gdesign/gdesign/gdesign/gdesign;
-    background-color: var(--color-galactic-blue);
-  }
-  .specialties__ui-ux {
-    grid-area: ui-ux/ui-ux/ui-ux/ui-ux;
-    background-color: var(--color-summer-yellow);
-  }
-  .specialties__apps {
-    grid-area: apps/apps/apps/apps;
-    background-color: var(--color-pink);
-  }
-  .specialties__illustrations {
-    grid-area: illustrations/illustrations/illustrations/illustrations;
-    background-color: var(--color-light-red);
-  }
-  .specialties__photography {
-    grid-area: photography/photography/photography/photography;
-    background-color: var(--color-cyan);
-  }
-  .specialties__motion {
-    grid-area: motion/motion/motion/motion;
-    background-color: var(--color-dark-purple);
   }
 }
 @media screen and (min-width: 1025px) {
   .specialties {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(6, 15.5rem);
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, minmax(18.2rem, 1fr));
     grid-template-areas: "gdesign gdesign ui-ux apps photography photography" "gdesign gdesign illustrations illustrations motion motion";
   }
 }
