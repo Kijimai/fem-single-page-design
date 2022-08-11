@@ -6,6 +6,8 @@
   transition: 0.3s ease background-color;
   font-weight: 700;
   line-height: 2.8rem;
+  white-space: nowrap;
+  font-size: 1.4rem;
   
   &.dark {
     background-color: var(--color-dark);
@@ -16,7 +18,17 @@
     }
   }
 
-  @media screen and (min-width: 376px) {
+  &.light-red {
+    background-color: var(--color-light-red);
+    color: var(--color-text-light);
+
+    &:hover {
+      background-color: var(--color-summer-yellow);
+    }
+  }
+
+  @media screen and (min-width: 600px) {
     padding: 1.4rem 4.5rem;
+    font-size: 1.6rem;
   }
 }

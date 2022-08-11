@@ -68,7 +68,7 @@
     background-color: var(--color-dark-purple);
   }
 
-  @media screen and (min-width: 769px) and (max-width: 1024px) {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     grid-template-columns: repeat(4, minmax(15.5rem, 1fr));
     grid-template-rows: repeat(3, minmax(18.2rem, 1fr));
     grid-template-areas:
@@ -79,7 +79,7 @@
 
   @media screen and (min-width: 1025px) {
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, minmax(18.2rem, 1fr));
+    grid-template-rows: repeat(2, minmax(18.2rem, 1fr));
     grid-template-areas:
       "gdesign gdesign ui-ux apps photography photography"
       "gdesign gdesign illustrations illustrations motion motion";
