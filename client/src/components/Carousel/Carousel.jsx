@@ -26,25 +26,28 @@ const Carousel = () => {
   return (
     <section>
       <div className="carousel">
-        <div className="carousel__image-slides">
-          {images.map((image, index) => {
-            return (
-              <img
-                key={index}
-                src={image.src}
-                alt={image.alt}
-                className="image"
-              />
-            )
-          })}
-        </div>
-        <div className="carousel__btn-container">
-          <Button color="dark" type="circle">
-            <img src={prev} alt="previous" />
-          </Button>
-          <Button color="dark" type="circle">
-            <img src={next} alt="next" />
-          </Button>
+        <h2>My work</h2>
+        <div className="carousel__inner-container">
+          <div className="carousel__image-slides">
+            {images.map((image, index) => {
+              return (
+                <img
+                  key={index}
+                  src={image.src}
+                  alt={image.alt}
+                  className="carousel__image"
+                />
+              )
+            })}
+          </div>
+          <div className="carousel__btn-container">
+            <Button color="dark" type="circle">
+              <img src={prev} alt="previous" />
+            </Button>
+            <Button color="dark" type="circle">
+              <img src={next} alt="next" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

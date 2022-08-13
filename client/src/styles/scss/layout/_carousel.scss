@@ -1,4 +1,18 @@
 .carousel {
+  &__image-slides {
+    display: flex;
+    position: relative;
+    gap: 1.5rem;
+    overflow-x: scroll;
+  }
+
+  &__image {
+    display: block;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 27rem;
+  }
+
   &__btn-container {
     display: flex;
     gap: 1.6rem;
