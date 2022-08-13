@@ -235,6 +235,12 @@ body {
   }
 }
 
+.carousel__btn-container {
+  display: flex;
+  gap: 1.6rem;
+  justify-content: center;
+}
+
 .booking {
   background-color: var(--color-dark);
   color: var(--color-text-light);
@@ -299,6 +305,13 @@ body {
   white-space: nowrap;
   font-size: 1.4rem;
 }
+.btn.circle {
+  padding: 2.5rem;
+  border-radius: 50%;
+  font-weight: initial;
+  line-height: 1;
+  font-size: initial;
+}
 .btn.dark {
   background-color: var(--color-dark);
   color: var(--color-text-light);
@@ -312,6 +325,10 @@ body {
 }
 .btn.light-red:hover {
   background-color: var(--color-summer-yellow);
+}
+.btn img {
+  height: 1.5rem;
+  width: 1.5rem;
 }
 @media screen and (min-width: 600px) {
   .btn {

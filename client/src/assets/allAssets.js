@@ -9,6 +9,8 @@ import slide2 from "./image-slide-2.jpg"
 import slide3 from "./image-slide-3.jpg"
 import slide4 from "./image-slide-4.jpg"
 import slide5 from "./image-slide-5.jpg"
+import prev from "./icon-arrow-left.svg"
+import next from "./icon-arrow-right.svg"
 
 export {
   graphicDesign,
@@ -22,4 +24,6 @@ export {
   slide3,
   slide4,
   slide5,
+  prev,
+  next,
 }
