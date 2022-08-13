@@ -4,8 +4,8 @@ const Booking = () => {
   return (
     <section>
       <div className="booking">
-        <h2>Book a call with me</h2>
         <div className="booking__info">
+          <h2>Book a call with me</h2>
           <p>
             I'd love to have a chat to see how I can help you. Thje best first
             step is for us to discuss your project during a free consultation.

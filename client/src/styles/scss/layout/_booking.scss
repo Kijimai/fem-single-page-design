@@ -1,21 +1,55 @@
 .booking {
   background-color: var(--color-dark);
   color: var(--color-text-light);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 2.4rem;
   padding: 4.8rem 2.4rem;
   margin: 4rem 0;
   border-radius: 1rem;
   text-align: center;
   line-height: 2.6rem;
-  
-  h2 {
-    font-size: 2.6rem;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5rem;
     font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+
+    h2 {
+      font-size: 2.6rem;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    padding: 5.6rem 7.5rem 6.4rem;
+
+    &__info {
+      font-size: 1.8rem;
+
+      h2 {
+        font-size: 3.2rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8rem 9.5rem;
+
+    &__info {
+      gap: 2.5rem;
+      max-width: 54rem;
+      align-items: flex-start;
+      text-align: left;
+      margin-bottom: 0;
+      h2 {
+        font-size: 4rem;
+      }
+    }
   }
 }
