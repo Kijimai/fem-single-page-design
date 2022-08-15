@@ -1,27 +1,33 @@
-import React, { useState } from "react"
+import React, { useState, useMemo } from "react"
 import Button from "../Button/Button"
-import {
-  slide1,
-  slide2,
-  slide3,
-  slide4,
-  slide5,
-  prev,
-  next,
-} from "../../assets/allAssets"
+import useCarousel from "../../hooks/useCarousel"
+import { prev, next } from "../../assets/allAssets"
 
-const images = [
-  { src: slide1, alt: "slide 1" },
-  { src: slide2, alt: "slide 2" },
-  { src: slide3, alt: "slide 3" },
-  { src: slide4, alt: "slide 4" },
-  { src: slide5, alt: "slide 5" },
-]
-
-const Carousel = () => {
+function Carousel({ images }) {
   const [slideIndex, setSlideIndex] = useState(2)
+  const imageLength = images.length
+  const carouselDisplay = useCarousel({ images, slideIndex })
 
-  const changeSlide = () => {}
+  const onNext = (currentIndex) => {
+    console.log(imageLength, currentIndex)
+    if (currentIndex === imageLength - 1) {
+      return setSlideIndex(0)
+    }
+    setSlideIndex(slideIndex + 1)
+  }
+
+  const onPrevious = (currentIndex) => {
+    console.log(imageLength, currentIndex)
+    if (currentIndex <= 0) {
+      return setSlideIndex(imageLength - 1)
+    }
+    setSlideIndex(slideIndex - 1)
+  }
+
+  // If images prop is not an array or if it is empty, return null
+  if (!Array.isArray(images) || imageLength <= 0) {
+    return null
+  }
 
   return (
     <section>
@@ -29,22 +35,23 @@ const Carousel = () => {
         <h2>My work</h2>
         <div className="carousel__inner-container">
           <div className="carousel__image-slides">
-            {images.map((image, index) => {
-              return (
-                <img
-                  key={index}
-                  src={image.src}
-                  alt={image.alt}
-                  className="carousel__image"
-                />
-              )
+            {carouselDisplay.map((item, index) => {
+              return <img key={index} src={item.src} alt={item.alt} />
             })}
           </div>
           <div className="carousel__btn-container">
-            <Button color="dark" type="circle">
+            <Button
+              onClick={() => onPrevious(slideIndex)}
+              color="dark"
+              type="circle"
+            >
               <img src={prev} alt="previous" />
             </Button>
-            <Button color="dark" type="circle">
+            <Button
+              onClick={() => onNext(slideIndex)}
+              color="dark"
+              type="circle"
+            >
               <img src={next} alt="next" />
             </Button>
           </div>
