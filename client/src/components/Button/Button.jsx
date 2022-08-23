@@ -1,7 +1,7 @@
 import React from "react"
 
 const Button = (props) => {
-  const { color, children, type, onClick } = props
+  const { color, children, type, onClick, ref } = props
 
   if (type === "circle") {
     return (
@@ -11,7 +11,7 @@ const Button = (props) => {
     )
   }
 
-  return <button className={`btn ${color}`}>{children}</button>
+  return <button ref={ref} className={`btn ${color}`}>{children}</button>
 }
 
 export default Button

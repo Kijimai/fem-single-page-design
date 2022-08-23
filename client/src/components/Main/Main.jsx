@@ -16,13 +16,13 @@ const images = [
 
 const Main = () => {
   return (
-    <div className="container">
+    <>
       <Hero />
       <Specialties />
       <About />
       <Carousel images={images} />
       <Booking />
-    </div>
+    </>
   )
 }
 

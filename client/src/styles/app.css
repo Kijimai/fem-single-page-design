@@ -48,13 +48,19 @@ body {
   }
 }
 
-.container {
+.hero,
+.about,
+.specialties,
+.booking {
   display: block;
   margin: 0 auto;
   width: 100%;
 }
 @media screen and (min-width: 900px) {
-  .container {
+  .hero,
+.about,
+.specialties,
+.booking {
     max-width: 79.5%;
   }
 }
@@ -146,10 +152,11 @@ body {
 }
 
 .about {
-  margin: 10rem 0;
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
 }
 @media screen and (min-width: 600px) {
   .about {
@@ -238,22 +245,39 @@ body {
   }
 }
 
-.carousel h2 {
+.my-work h2 {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 3.2rem;
 }
-.carousel img {
-  display: block;
-  max-width: 27rem;
+.my-work .carousel {
+  user-select: none;
+}
+.my-work .carousel:hover {
+  cursor: grab;
+}
+.my-work .carousel .mySwiper {
+  width: 100%;
+  height: 18rem;
+}
+.my-work .carousel .swiperSlide {
+  width: 27rem;
+}
+.my-work .carousel .swiperSlide img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
 }
-.carousel__button-container {
+.my-work .carousel__button-container {
   margin-top: 5.6rem;
   display: flex;
   justify-content: center;
   gap: 1.6rem;
+}
+@media only screen and (min-width: 600px) {
+  .my-work .carousel .mySwiper {
+    height: 36rem;
+  }
 }
 
 .booking {
@@ -261,13 +285,14 @@ body {
   color: var(--color-text-light);
   gap: 2.4rem;
   padding: 4.8rem 2.4rem;
-  margin: 4rem 0;
   border-radius: 1rem;
   text-align: center;
   line-height: 2.6rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .booking__info {
   display: flex;
@@ -326,6 +351,8 @@ body {
   font-weight: initial;
   line-height: 1;
   font-size: initial;
+  height: 6.4rem;
+  width: 6.4rem;
 }
 .btn.dark {
   background-color: var(--color-dark);
